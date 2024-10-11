@@ -15,6 +15,7 @@ function Home() {
     const typeEffect = () => {
       if (forward && index <= fullName.length) {
         setDisplayName(fullName.substring(0, index)); 
+        index++;
         if (index > fullName.length) {
           forward = false; 
           setTimeout(typeEffect, delayBeforeRestart); 
@@ -30,11 +31,10 @@ function Home() {
       setTimeout(typeEffect, typingSpeed);
     };
 
-    typeEffect();
+    typeEffect(); 
   }, []);
 
   const handleWhatsAppClick = () => {
-  
     window.open("https://wa.me/6285158442747?text=Hi%20Farhan%20apa%20kabar?", "_blank");
   };
 
@@ -43,9 +43,7 @@ function Home() {
       id="home" 
       className="flex flex-col md:flex-row items-center justify-between px-4 md:px-16 py-16 pt-24 md:pt-16 h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden"
     >
-    
       <div className="w-full md:w-1/2 text-center md:text-left flex flex-col items-center md:items-start mt-8 md:mt-0 px-4 md:px-0 order-2 md:order-1 z-20">
-  
         <div className="flex space-x-4 mb-4">
           <a 
             href="https://www.instagram.com/farhaaan____/" 
@@ -81,7 +79,6 @@ function Home() {
         </button>
       </div>
 
-      {/* Bagian Gambar */}
       <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0 order-1 md:order-2 relative z-10">
         <img 
           src={profilePhoto} 

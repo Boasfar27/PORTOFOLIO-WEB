@@ -27,8 +27,7 @@ function About() {
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">About Me</h2>
           <h3 className="text-xl font-semibold text-green-500 mb-4">Introduction</h3>
           <p className="text-gray-700 dark:text-gray-300 mb-6">
-            Becoming a programmer has been my life for the last 3 years since I was in high school. 
-            Interested in developing talents and careers in the field of information and technology by leveraging my skills as a mobile programmer or web developer in advancing the company and competing in the coming era.
+          I am a student of Surabaya State University, Information System Study Program, Becoming a programmer has been my life goal for the past 2 years since I was in high school. I am interested in developing my talents and careers in the field of information and technology by utilizing my skills as a junior programmer to advance the company and compete in the future era.
           </p>
 
           <div className="space-y-2 mb-4">

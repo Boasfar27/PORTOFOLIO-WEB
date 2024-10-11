@@ -72,7 +72,7 @@ function Header() {
         <a onClick={() => scrollToSection('about')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">About</a>
         <a onClick={() => scrollToSection('skills')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Skills</a>
         <a onClick={() => scrollToSection('services')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Services</a>
-        <a onClick={() => scrollToSection('portfolio')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Portfolio</a>
+        <a onClick={() => scrollToSection('certificate')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Certificate</a>
         <a onClick={() => scrollToSection('contact')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Contact</a>
 
         {/* Icon untuk theme switch */}
@@ -90,7 +90,7 @@ function Header() {
           <a onClick={() => scrollToSection('about')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">About</a>
           <a onClick={() => scrollToSection('skills')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Skills</a>
           <a onClick={() => scrollToSection('services')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Services</a>
-          <a onClick={() => scrollToSection('portfolio')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Portfolio</a>
+          <a onClick={() => scrollToSection('certificate')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Certificate</a>
           <a onClick={() => scrollToSection('contact')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Contact</a>
           
           {/* Icon untuk theme switch di menu mobile */}
