@@ -12,7 +12,6 @@ import python from '../assets/python.png';
 import swift from '../assets/swift.png';
 import typescript from '../assets/typescript.png';
 
-// Array of skills with data including image and hover color
 const skills = [
   { name: 'HTML5', image: html5, color: 'rgb(227, 66, 52)' },
   { name: 'CSS3', image: css3, color: 'rgb(13, 202, 240)' },
@@ -56,7 +55,6 @@ function SkillCard({ skill, cardBackgroundColor }) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Icon image */}
       <img
         src={skill.image}
         alt={skill.name}
@@ -69,7 +67,6 @@ function SkillCard({ skill, cardBackgroundColor }) {
 function Skills() {
   const { theme } = useContext(ThemeContext);
 
-  // Determine the card background color based on the theme
   const cardBackgroundColor = theme === 'dark' ? 'bg-gray-900' : 'bg-white';
 
   return (

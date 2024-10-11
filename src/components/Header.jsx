@@ -38,10 +38,18 @@ function Header() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMobileMenuOpen(false); // Tutup menu mobile setelah navigasi
+    }
+  };
+
   return (
     <header className="flex justify-between items-center p-5 bg-white shadow-md fixed w-full z-50 dark:bg-gray-900 transition-colors duration-300">
       <h1 
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        onClick={() => scrollToSection('home')}
         className="text-2xl font-bold text-gray-900 dark:text-white cursor-pointer"
       >
         My Portfolio
@@ -60,12 +68,12 @@ function Header() {
 
       {/* Menu navigasi desktop */}
       <nav className="hidden md:flex space-x-4 items-center">
-        <a href="#home" className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400">Home</a>
-        <a href="#about" className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400">About</a>
-        <a href="#skills" className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400">Skills</a>
-        <a href="#services" className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400">Services</a>
-        <a href="#portfolio" className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400">Portfolio</a>
-        <a href="#contact" className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400">Contact</a>
+        <a onClick={() => scrollToSection('home')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Home</a>
+        <a onClick={() => scrollToSection('about')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">About</a>
+        <a onClick={() => scrollToSection('skills')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Skills</a>
+        <a onClick={() => scrollToSection('services')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Services</a>
+        <a onClick={() => scrollToSection('portfolio')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Portfolio</a>
+        <a onClick={() => scrollToSection('contact')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Contact</a>
 
         {/* Icon untuk theme switch */}
         <div className="ml-4 cursor-pointer" onClick={handleThemeSwitch}>
@@ -78,12 +86,12 @@ function Header() {
       {/* Menu navigasi mobile */}
       {isMobileMenuOpen && (
         <div className="absolute top-16 right-0 bg-white dark:bg-gray-800 shadow-lg rounded-lg w-full max-w-xs p-4 flex flex-col space-y-4 z-40 md:hidden">
-          <a href="#home" className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400" onClick={toggleMobileMenu}>Home</a>
-          <a href="#about" className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400" onClick={toggleMobileMenu}>About</a>
-          <a href="#skills" className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400" onClick={toggleMobileMenu}>Skills</a>
-          <a href="#services" className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400" onClick={toggleMobileMenu}>Services</a>
-          <a href="#portfolio" className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400" onClick={toggleMobileMenu}>Portfolio</a>
-          <a href="#contact" className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400" onClick={toggleMobileMenu}>Contact</a>
+          <a onClick={() => scrollToSection('home')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Home</a>
+          <a onClick={() => scrollToSection('about')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">About</a>
+          <a onClick={() => scrollToSection('skills')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Skills</a>
+          <a onClick={() => scrollToSection('services')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Services</a>
+          <a onClick={() => scrollToSection('portfolio')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Portfolio</a>
+          <a onClick={() => scrollToSection('contact')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Contact</a>
           
           {/* Icon untuk theme switch di menu mobile */}
           <div className="flex justify-center mt-4 cursor-pointer" onClick={handleThemeSwitch}>

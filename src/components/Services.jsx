@@ -16,7 +16,6 @@ function Services() {
       <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Services</h2>
       <h3 className="text-xl font-semibold text-green-500 mb-4">Our Services</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
-        {/* Card 1: Web Development */}
         <div
   className={`w-full h-52 rounded-lg shadow-md transition-all duration-300 ${cardBackgroundColor} ${cardTextColor} 
               dark:bg-gray-800 hover:shadow-lg hover:shadow-pink-500 hover:scale-105`}
@@ -30,7 +29,6 @@ function Services() {
   </a>
 </div>
 
-{/* Card 2: User Interface Design */}
 <div
   className={`w-full h-52 rounded-lg shadow-md transition-all duration-300 ${cardBackgroundColor} ${cardTextColor} 
               dark:bg-gray-800 hover:shadow-lg hover:shadow-pink-500 hover:scale-105`}
@@ -44,7 +42,6 @@ function Services() {
   </a>
 </div>
 
-{/* Card 3: Mobile Development */}
 <div
   className={`w-full h-52 rounded-lg shadow-md transition-all duration-300 ${cardBackgroundColor} ${cardTextColor} 
               dark:bg-gray-800 hover:shadow-lg hover:shadow-pink-500 hover:scale-105`}

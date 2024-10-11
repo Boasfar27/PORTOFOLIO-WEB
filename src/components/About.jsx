@@ -23,7 +23,6 @@ function About() {
           </div>
         </div>
 
-        {/* Bagian Informasi */}
         <div className="w-full md:w-1/2 md:pl-8 text-center md:text-left">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">About Me</h2>
           <h3 className="text-xl font-semibold text-green-500 mb-4">Introduction</h3>
@@ -32,7 +31,6 @@ function About() {
             Interested in developing talents and careers in the field of information and technology by leveraging my skills as a mobile programmer or web developer in advancing the company and competing in the coming era.
           </p>
 
-          {/* Detail Kontak */}
           <div className="space-y-2 mb-4">
             <div className="flex items-center justify-center md:justify-start text-gray-900 dark:text-white">
               <FaUser className="mr-2" />
@@ -48,16 +46,17 @@ function About() {
             </div>
           </div>
 
-          {/* Tombol Download CV */}
           <div className="flex justify-center md:justify-start">
             <a 
-                href={cvFile} 
-                download="CV_Muhammad_Farhan_Nabil.pdf" 
-                className="px-6 py-3 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 transition duration-300"
+              href={cvFile} 
+              download="CV_Muhammad_Farhan_Nabil.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 transition duration-300"
             >
-                Download CV
+              Download CV
             </a>
-            </div>
+          </div>
         </div>
       </div>
     </section>
