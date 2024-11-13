@@ -55,7 +55,6 @@ function Header() {
         My Portfolio
       </h1>
       
-      {/* Icon Hamburger untuk mobile */}
       <div className="md:hidden flex items-center">
         <div className="cursor-pointer" onClick={toggleMobileMenu}>
           {isMobileMenuOpen ? (
@@ -66,8 +65,7 @@ function Header() {
         </div>
       </div>
 
-      {/* Menu navigasi desktop */}
-      <nav className="hidden md:flex space-x-4 items-center">
+      <nav className="hidden md:flex space-x-12 items-center">
         <a onClick={() => scrollToSection('home')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Home</a>
         <a onClick={() => scrollToSection('about')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">About</a>
         <a onClick={() => scrollToSection('skills')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Skills</a>
@@ -75,7 +73,6 @@ function Header() {
         <a onClick={() => scrollToSection('certificate')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Certificate</a>
         <a onClick={() => scrollToSection('contact')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Contact</a>
 
-        {/* Icon untuk theme switch */}
         <div className="ml-4 cursor-pointer" onClick={handleThemeSwitch}>
           {theme === 'light' && <BsSun className="text-yellow-500 hover:text-purple-600 transition-colors duration-300" size={24} />}
           {theme === 'dark' && <BsMoonStars className="text-blue-500 hover:text-purple-600 transition-colors duration-300" size={24} />}
@@ -83,7 +80,6 @@ function Header() {
         </div>
       </nav>
 
-      {/* Menu navigasi mobile */}
       {isMobileMenuOpen && (
         <div className="absolute top-16 right-0 bg-white dark:bg-gray-800 shadow-lg rounded-lg w-full max-w-xs p-4 flex flex-col space-y-4 z-40 md:hidden">
           <a onClick={() => scrollToSection('home')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Home</a>
@@ -93,7 +89,6 @@ function Header() {
           <a onClick={() => scrollToSection('certificate')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Certificate</a>
           <a onClick={() => scrollToSection('contact')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Contact</a>
           
-          {/* Icon untuk theme switch di menu mobile */}
           <div className="flex justify-center mt-4 cursor-pointer" onClick={handleThemeSwitch}>
             {theme === 'light' && <BsSun className="text-yellow-500 hover:text-purple-600 transition-colors duration-300" size={24} />}
             {theme === 'dark' && <BsMoonStars className="text-blue-500 hover:text-purple-600 transition-colors duration-300" size={24} />}
