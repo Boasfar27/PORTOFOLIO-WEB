@@ -26,8 +26,8 @@ function About() {
         <div className="w-full md:w-1/2 md:pl-8 text-center md:text-left">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">About Me</h2>
           <h3 className="text-xl font-semibold text-green-500 mb-4">Introduction</h3>
-          <p className="text-gray-700 dark:text-gray-300 mb-6">
-          I am a student of Surabaya State University, Information System Study Program, Becoming a programmer has been my life goal for the past 2 years since I was in high school. I am interested in developing my talents and careers in the field of information and technology by utilizing my skills as a junior programmer to advance the company and compete in the future era.
+          <p className="text-gray-700 dark:text-gray-300 mb-6 mt-4 px-2 sm:px-0 text-justify">
+          I am a student of the Information Systems Study Program at Surabaya State University, currently in semester 3. Becoming a programmer has been my dream since two years ago when I was still in high school. I am very interested in developing skills in the field of information technology, especially in website development with a focus as a front-end developer. I am also active as a member of BEM in the Advokesma department, and have the passion to continue learning in order to keep up with the development of technology that continues to grow in the present and the future. I believe that by utilizing my skills as a junior programmer, I can contribute to the company and compete in this dynamic digital era.
           </p>
 
           <div className="space-y-2 mb-4">

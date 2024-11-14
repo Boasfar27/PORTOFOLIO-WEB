@@ -2,19 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { BsSun, BsMoonStars, BsLaptop, BsList, BsX } from 'react-icons/bs';
 
 function Header() {
-  const [theme, setTheme] = useState('system'); // Default mode adalah system
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State untuk menu mobile
+  const [theme, setTheme] = useState('system');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState('home'); // State untuk link aktif
 
   useEffect(() => {
-    // Menerapkan mode tema berdasarkan state
     if (theme === 'light') {
       document.documentElement.classList.remove('dark');
       document.documentElement.style.backgroundColor = '#ffffff';
     } else if (theme === 'dark') {
       document.documentElement.classList.add('dark');
-      document.documentElement.style.backgroundColor = '#1a202c'; // Background hitam untuk dark mode
+      document.documentElement.style.backgroundColor = '#1a202c';
     } else {
-      // Menyesuaikan dengan preferensi sistem pengguna
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       if (prefersDark) {
         document.documentElement.classList.add('dark');
@@ -38,18 +37,26 @@ function Header() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const scrollToSection = (sectionId) => {
+  const handleLinkClick = (sectionId) => {
+    setActiveLink(sectionId); // Update link yang aktif
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false); // Tutup menu mobile setelah navigasi
+      setIsMobileMenuOpen(false);
     }
   };
+
+  const linkClasses = (link) =>
+    `font-semibold transition-colors duration-300 cursor-pointer ${
+      activeLink === link
+        ? 'text-purple-600 dark:text-purple-400 border-b-2 border-purple-600'
+        : 'text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400'
+    }`;
 
   return (
     <header className="flex justify-between items-center p-5 bg-white shadow-md fixed w-full z-50 dark:bg-gray-900 transition-colors duration-300">
       <h1 
-        onClick={() => scrollToSection('home')}
+        onClick={() => handleLinkClick('home')}
         className="text-2xl font-bold text-gray-900 dark:text-white cursor-pointer"
       >
         My Portfolio
@@ -66,12 +73,12 @@ function Header() {
       </div>
 
       <nav className="hidden md:flex space-x-12 items-center">
-        <a onClick={() => scrollToSection('home')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Home</a>
-        <a onClick={() => scrollToSection('about')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">About</a>
-        <a onClick={() => scrollToSection('skills')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Skills</a>
-        <a onClick={() => scrollToSection('services')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Services</a>
-        <a onClick={() => scrollToSection('certificate')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Certificate</a>
-        <a onClick={() => scrollToSection('contact')} className="font-semibold text-gray-900 transition-colors duration-300 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Contact</a>
+        <a onClick={() => handleLinkClick('home')} className={linkClasses('home')}>Home</a>
+        <a onClick={() => handleLinkClick('about')} className={linkClasses('about')}>About</a>
+        <a onClick={() => handleLinkClick('skills')} className={linkClasses('skills')}>Skills</a>
+        <a onClick={() => handleLinkClick('services')} className={linkClasses('services')}>Services</a>
+        <a onClick={() => handleLinkClick('certificate')} className={linkClasses('certificate')}>Certificate</a>
+        <a onClick={() => handleLinkClick('contact')} className={linkClasses('contact')}>Contact</a>
 
         <div className="ml-4 cursor-pointer" onClick={handleThemeSwitch}>
           {theme === 'light' && <BsSun className="text-yellow-500 hover:text-purple-600 transition-colors duration-300" size={24} />}
@@ -82,12 +89,12 @@ function Header() {
 
       {isMobileMenuOpen && (
         <div className="absolute top-16 right-0 bg-white dark:bg-gray-800 shadow-lg rounded-lg w-full max-w-xs p-4 flex flex-col space-y-4 z-40 md:hidden">
-          <a onClick={() => scrollToSection('home')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Home</a>
-          <a onClick={() => scrollToSection('about')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">About</a>
-          <a onClick={() => scrollToSection('skills')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Skills</a>
-          <a onClick={() => scrollToSection('services')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Services</a>
-          <a onClick={() => scrollToSection('certificate')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Certificate</a>
-          <a onClick={() => scrollToSection('contact')} className="font-semibold text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 cursor-pointer">Contact</a>
+          <a onClick={() => handleLinkClick('home')} className={linkClasses('home')}>Home</a>
+          <a onClick={() => handleLinkClick('about')} className={linkClasses('about')}>About</a>
+          <a onClick={() => handleLinkClick('skills')} className={linkClasses('skills')}>Skills</a>
+          <a onClick={() => handleLinkClick('services')} className={linkClasses('services')}>Services</a>
+          <a onClick={() => handleLinkClick('certificate')} className={linkClasses('certificate')}>Certificate</a>
+          <a onClick={() => handleLinkClick('contact')} className={linkClasses('contact')}>Contact</a>
           
           <div className="flex justify-center mt-4 cursor-pointer" onClick={handleThemeSwitch}>
             {theme === 'light' && <BsSun className="text-yellow-500 hover:text-purple-600 transition-colors duration-300" size={24} />}

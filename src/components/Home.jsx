@@ -41,7 +41,7 @@ function Home() {
   return (
     <section 
       id="home" 
-      className="flex flex-col md:flex-row items-center justify-between px-4 md:px-16 py-16 pt-24 md:pt-16 h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden"
+      className="flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 md:px-16 py-16 pt-24 md:pt-16 h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden"
     >
       <div className="w-full md:w-1/2 text-center md:text-left flex flex-col items-center md:items-start mt-8 md:mt-0 px-4 md:px-0 order-2 md:order-1 z-20">
         <div className="flex space-x-4 mb-4">
@@ -51,7 +51,7 @@ function Home() {
             rel="noopener noreferrer" 
             className="text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300"
           >
-            <FaInstagram size={30} />
+            <FaInstagram size={24} />
           </a>
           <a 
             href="https://github.com/Boasfar27" 
@@ -59,21 +59,21 @@ function Home() {
             rel="noopener noreferrer" 
             className="text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300"
           >
-            <FaGithub size={30} />
+            <FaGithub size={24} />
           </a>
         </div>
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
           Hello, I'm
         </h1>
-        <h2 className="text-4xl md:text-5xl font-extrabold text-purple-600 dark:text-purple-400 mt-4 min-h-[60px]">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-purple-600 dark:text-purple-400 mt-4 min-h-[60px]">
           {displayName}
         </h2>
-        <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 mt-4">
-          UI Designer and Web Developer who is creative, responsible, and passionate about learning the latest technology.
+        <p className=" text-gray-700 dark:text-gray-300 mt-4 px-2 sm:px-0 text-justify">
+          A professional and detail-oriented junior programmer with expertise in front-end development. Ready to present responsive and innovative interface solutions, and committed to continue learning and contributing maximally.
         </p>
         <button 
           onClick={handleWhatsAppClick} 
-          className="mt-6 md:mt-8 px-6 py-3 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 transition duration-300 z-30"
+          className="mt-4 sm:mt-6 md:mt-8 px-4 sm:px-6 py-2 sm:py-3 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 transition duration-300 z-30"
         >
           Contact Me
         </button>
@@ -83,7 +83,7 @@ function Home() {
         <img 
           src={profilePhoto} 
           alt="Profile"
-          className="w-4/5 md:w-full max-w-xs md:max-w-sm lg:max-w-md object-contain rounded-md"
+          className="w-3/4 sm:w-4/5 md:w-full max-w-xs md:max-w-sm lg:max-w-md object-contain rounded-md"
           style={{
             maxHeight: '80vh', 
           }}
