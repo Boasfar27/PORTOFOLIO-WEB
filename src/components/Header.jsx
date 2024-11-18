@@ -38,11 +38,11 @@ function Header() {
   };
 
   const handleLinkClick = (sectionId) => {
-    setActiveLink(sectionId); // Update link yang aktif
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
+      setActiveLink(sectionId); // Update link yang aktif
+      setIsMobileMenuOpen(false); // Tutup menu di mobile
     }
   };
 
@@ -52,6 +52,29 @@ function Header() {
         ? 'text-purple-600 dark:text-purple-400 border-b-2 border-purple-600'
         : 'text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400'
     }`;
+
+  // Tambahkan scroll listener
+  useEffect(() => {
+    const sections = ['home', 'about', 'skills', 'services', 'certificate', 'contact'];
+
+    const handleScroll = () => {
+      let currentSection = 'home'; // Default section
+      sections.forEach((sectionId) => {
+        const sectionElement = document.getElementById(sectionId);
+        if (
+          sectionElement &&
+          sectionElement.getBoundingClientRect().top <= window.innerHeight / 2 &&
+          sectionElement.getBoundingClientRect().bottom >= window.innerHeight / 2
+        ) {
+          currentSection = sectionId;
+        }
+      });
+      setActiveLink(currentSection);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <header className="flex justify-between items-center p-5 bg-white shadow-md fixed w-full z-50 dark:bg-gray-900 transition-colors duration-300">
