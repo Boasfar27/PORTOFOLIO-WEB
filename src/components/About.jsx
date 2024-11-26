@@ -86,15 +86,7 @@ function About() {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            I am a student of the Information Systems Study Program at Surabaya
-            State University, currently in semester 3. Becoming a programmer has
-            been my dream since two years ago when I was still in high school. I
-            am very interested in developing skills in the field of information
-            technology, especially in website development with a focus as a
-            front-end developer. I am also active as a member of BEM in the
-            Advokesma department, and have the passion to continue learning in
-            order to keep up with the development of technology that continues to
-            grow in the present and the future.
+            Saya adalah mahasiswa Program Studi Sistem Informasi Universitas Negeri Surabaya, saat ini sedang menempuh semester 3. Menjadi seorang programmer sudah menjadi cita-cita saya sejak dua tahun lalu saat masih duduk di bangku SMA. Saya sangat tertarik untuk mengembangkan kemampuan di bidang teknologi informasi, khususnya pengembangan website dengan fokus sebagai front-end developer. Saya juga aktif sebagai anggota BEM jurusan Advokesma, dan memiliki semangat untuk terus belajar agar dapat mengikuti perkembangan teknologi yang terus berkembang di masa kini dan masa yang akan datang.
           </motion.p>
 
           <motion.div className="space-y-2 mb-6" data-aos="fade-up" data-aos-delay="300">

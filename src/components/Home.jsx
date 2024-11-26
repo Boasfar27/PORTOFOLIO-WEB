@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { FaInstagram, FaGithub, FaWhatsapp } from 'react-icons/fa';
+import  { useState, useEffect } from 'react';
+import { FaInstagram, FaGithub,FaTimes } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -7,6 +7,8 @@ import profilePhoto from '../assets/FARHAN 1.PNG';
 
 function Home() {
   const [displayName, setDisplayName] = useState('');
+  const [setContactType] = useState(null); 
+  const [isModalOpen, setIsModalOpen] = useState(false); // State to handle modal visibility
   const fullName = "Muhammad Farhan Nabil";
   const typingSpeed = 150;
   const delayBeforeRestart = 2000;
@@ -58,14 +60,25 @@ function Home() {
     }
   };
 
-  const handleWhatsAppClick = () => {
-    const greeting = getGreeting();
-    const message = `${greeting}, Farhan.\n\nPerkenalkan, saya [Nama HRD/HR] dari [PT APA]. Kami tertarik dengan portofolio Anda sebagai Frontend Developer, terutama pada proyek-proyek yang Anda kerjakan sebelumnya yang terlihat sangat inovatif.\n\nKami ingin menawarkan Anda posisi sebagai Frontend Developer di perusahaan kami, dengan fokus pada pengembangan antarmuka aplikasi web modern dan responsif. Jika Anda tertarik, kami dapat mendiskusikan lebih lanjut mengenai detail pekerjaan ini dan proses seleksi.\n\nApakah Anda memiliki waktu untuk berdiskusi lebih lanjut?`;
+  const handleContactMeClick = () => {
+    setIsModalOpen(true); // Open modal when "Contact Me" is clicked
+  };
 
-    const whatsappUrl = `https://wa.me/6285158442747?text=${encodeURIComponent(
-      message
-    )}`;
+  const handleOptionSelect = (type) => {
+    setContactType(type); // Set the selected contact type
+    const greeting = getGreeting();
+    let message = '';
+    
+    // Construct message based on selected type
+    if (type === 'recruitment') {
+      message = `${greeting}, Farhan.\n\nPerkenalkan, saya [Nama HRD/HR] dari [PT APA]. Kami tertarik dengan portofolio Anda sebagai Frontend Developer, terutama pada proyek-proyek yang Anda kerjakan sebelumnya yang terlihat sangat inovatif.\n\nKami ingin menawarkan Anda posisi sebagai Frontend Developer di perusahaan kami, dengan fokus pada pengembangan antarmuka aplikasi web modern dan responsif. Jika Anda tertarik, kami dapat mendiskusikan lebih lanjut mengenai detail pekerjaan ini dan proses seleksi.\n\nApakah Anda memiliki waktu untuk berdiskusi lebih lanjut?`;
+    } else {
+      message = `${greeting}, Farhan.\n\nSaya ingin menghubungi Anda untuk berdiskusi lebih lanjut mengenai proyek yang Anda kerjakan. Saya sangat tertarik dengan portofolio Anda, dan saya rasa ada potensi kolaborasi yang menarik.\n\nApakah Anda memiliki waktu untuk berbincang lebih lanjut?`;
+    }
+
+    const whatsappUrl = `https://wa.me/6285158442747?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
+    setIsModalOpen(false); // Close the modal after selecting the option
   };
 
   return (
@@ -118,19 +131,16 @@ function Home() {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          A professional and detail-oriented junior programmer with expertise in
-          front-end development. Ready to present responsive and innovative
-          interface solutions, and committed to continue learning and contributing
-          maximally.
+          Programmer junior yang profesional dan berorientasi pada detail dengan keahlian dalam pengembangan front-end. Siap menghadirkan solusi antarmuka yang responsif dan inovatif, serta berkomitmen untuk terus belajar dan berkontribusi secara maksimal.
         </p>
         <motion.button
-          onClick={handleWhatsAppClick}
-          className="mt-4 sm:mt-6 md:mt-8 p-4 bg-green-500 text-white rounded-full hover:bg-green-600 transition duration-300 z-30 flex items-center justify-center"
+          onClick={handleContactMeClick}
+          className="mt-4 sm:mt-6 md:mt-8 p-4 bg-blue-500 text-white rounded-full hover:bg-green-600 transition duration-300 z-30 flex items-center justify-center"
           whileHover={{ scale: 1.1 }}
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          <FaWhatsapp size={24} />
+          Contact Me
         </motion.button>
       </motion.div>
 
@@ -147,6 +157,39 @@ function Home() {
           whileHover={{ scale: 1.05 }}
         />
       </motion.div>
+
+      {isModalOpen && (
+  <div className="fixed inset-0 flex justify-center items-center bg-gray-900 bg-opacity-50 z-50">
+    <div className="relative bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl max-w-lg mx-auto transform transition-transform duration-300 scale-95 hover:scale-100">
+      <button
+        onClick={() => setIsModalOpen(false)} 
+        className="absolute top-3 right-3 text-gray-500 dark:text-gray-300 hover:text-red-500 transition duration-200"
+      >
+        <FaTimes size={24} />
+      </button>
+
+      <h2 className="text-2xl text-center text-gray-900 dark:text-white font-semibold mb-6">
+        Choose the Type of Inquiry
+      </h2>
+
+      <div className="space-y-4">
+        <button
+          onClick={() => handleOptionSelect('recruitment')}
+          className="w-full py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-lg rounded-md shadow-md hover:from-blue-600 hover:to-blue-700 transition duration-300 ease-in-out transform hover:scale-105"
+        >
+          Recruitment
+        </button>
+        <button
+          onClick={() => handleOptionSelect('general')}
+          className="w-full py-3 bg-gradient-to-r from-green-500 to-green-600 text-white text-lg rounded-md shadow-md hover:from-green-600 hover:to-green-700 transition duration-300 ease-in-out transform hover:scale-105"
+        >
+          General Inquiry
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
     </motion.section>
   );
 }
