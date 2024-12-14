@@ -10,7 +10,7 @@ import certificate6 from '../assets/SERTIFIKAT 6.jpg';
 import certificate7 from '../assets/SERTIFIKAT 7.jpg';
 import certificate8 from '../assets/SERTIFIKAT 8.jpg';
 import certificate9 from '../assets/SERTIFIKAT 9.jpg';
-import certificate10 from '../assets/SERTIFIKAT 10.jpg';
+import certificate10 from '../assets/SERTIFIKAT 11.jpg';
 
 function Certificate() {
   const { theme } = useContext(ThemeContext);
@@ -37,7 +37,7 @@ function Certificate() {
     },
     {
       image: certificate10,
-      link: 'https://storage.googleapis.com/myskill-v2-certificates/topic-DQ4WDIr2jXa70FUI477S/ySQjG0ynZeNFyev4ujYdS8Irew13-BfWyVUZjYxFHoCl0V88T.pdf',
+      link: 'https://drive.google.com/file/d/1wX04ogGJswGMjTdt_CbQJk4iSW-lajE1/view?usp=drivesdk',
     },
     {
       image: certificate6,

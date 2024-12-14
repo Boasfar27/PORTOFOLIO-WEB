@@ -1,5 +1,5 @@
-import  { useState, useEffect } from 'react';
-import { FaInstagram, FaGithub,FaTimes } from 'react-icons/fa';
+import  React,{ useState, useEffect } from 'react';
+import { FaInstagram, FaGithub,FaTimes, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -7,7 +7,7 @@ import profilePhoto from '../assets/FARHAN 1.PNG';
 
 function Home() {
   const [displayName, setDisplayName] = useState('');
-  const [setContactType] = useState(null); 
+  const [contactType, setContactType] = useState(null); 
   const [isModalOpen, setIsModalOpen] = useState(false); // State to handle modal visibility
   const fullName = "Muhammad Farhan Nabil";
   const typingSpeed = 150;
@@ -78,7 +78,7 @@ function Home() {
 
     const whatsappUrl = `https://wa.me/6285158442747?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
-    setIsModalOpen(false); // Close the modal after selecting the option
+    setIsModalOpen(false);
   };
 
   return (
@@ -112,6 +112,15 @@ function Home() {
           >
             <FaGithub size={24} />
           </motion.a>
+          <motion.a
+            href="https://www.linkedin.com/in/muhammad-farhan-nabil/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300"
+            whileHover={{ scale: 1.2 }}
+          >
+            <FaLinkedin size={24} />
+          </motion.a>
         </div>
         <h1
           className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white"
@@ -135,12 +144,12 @@ function Home() {
         </p>
         <motion.button
           onClick={handleContactMeClick}
-          className="mt-4 sm:mt-6 md:mt-8 p-4 bg-blue-500 text-white rounded-full hover:bg-green-600 transition duration-300 z-30 flex items-center justify-center"
+          className="mt-4 sm:mt-6 md:mt-8 p-4 bg-green-500 text-white rounded-full hover:bg-green-700 transition duration-300 z-30 flex items-center justify-center"
           whileHover={{ scale: 1.1 }}
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          Contact Me
+          <FaWhatsapp size={24} />
         </motion.button>
       </motion.div>
 
@@ -169,7 +178,7 @@ function Home() {
       </button>
 
       <h2 className="text-2xl text-center text-gray-900 dark:text-white font-semibold mb-6">
-        Choose the Type of Inquiry
+      Pilih Jenis Pertanyaan
       </h2>
 
       <div className="space-y-4">
@@ -177,13 +186,13 @@ function Home() {
           onClick={() => handleOptionSelect('recruitment')}
           className="w-full py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-lg rounded-md shadow-md hover:from-blue-600 hover:to-blue-700 transition duration-300 ease-in-out transform hover:scale-105"
         >
-          Recruitment
+          Pencarian Kandidat
         </button>
         <button
           onClick={() => handleOptionSelect('general')}
           className="w-full py-3 bg-gradient-to-r from-green-500 to-green-600 text-white text-lg rounded-md shadow-md hover:from-green-600 hover:to-green-700 transition duration-300 ease-in-out transform hover:scale-105"
         >
-          General Inquiry
+          Pertanyaan Umum
         </button>
       </div>
     </div>
