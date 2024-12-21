@@ -82,12 +82,15 @@ function About() {
             Introduction
           </motion.h3>
           <motion.p
-            className="text-gray-700 dark:text-gray-300 mb-6 text-sm sm:text-base lg:text-lg px-2 sm:px-0 text-justify max-w-full lg:max-w-prose mx-auto md:mx-0"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            Saya adalah mahasiswa Program Studi Sistem Informasi Universitas Negeri Surabaya, saat ini sedang menempuh semester 3. Menjadi seorang programmer sudah menjadi cita-cita saya sejak dua tahun lalu saat masih duduk di bangku SMA. Saya sangat tertarik untuk mengembangkan kemampuan di bidang teknologi informasi, khususnya pengembangan website dengan fokus sebagai front-end developer. Saya juga aktif sebagai anggota BEM Fakultas Teknik Departemen Advokesma, dan memiliki semangat untuk terus belajar agar dapat mengikuti perkembangan teknologi yang terus berkembang di masa kini dan masa yang akan datang.
-          </motion.p>
+  className="text-gray-700 dark:text-gray-300 mb-6 text-sm sm:text-base lg:text-lg px-2 sm:px-0 text-justify max-w-full lg:max-w-prose mx-auto md:mx-0"
+  data-aos="fade-up"
+  data-aos-delay="200"
+>
+  Saya adalah mahasiswa Program Studi Sistem Informasi Universitas Negeri Surabaya, saat ini sedang menempuh&nbsp;
+  <span className="text-orange-500">semester 4</span>
+  &nbsp;. Menjadi seorang programmer sudah menjadi cita-cita saya sejak dua tahun lalu saat masih duduk di bangku SMA. Saya sangat tertarik untuk mengembangkan kemampuan di bidang teknologi informasi, khususnya pengembangan website dengan fokus sebagai front-end developer. Saya juga aktif sebagai anggota BEM Fakultas Teknik Departemen Advokesma, dan memiliki semangat untuk terus belajar agar dapat mengikuti perkembangan teknologi yang terus berkembang di masa kini dan masa yang akan datang.
+</motion.p>
+
 
           <motion.div className="space-y-2 mb-6" data-aos="fade-up" data-aos-delay="300">
             <div className="flex items-center justify-center md:justify-start text-gray-900 dark:text-white">
@@ -105,22 +108,22 @@ function About() {
           </motion.div>
 
           <motion.div
-            className="flex justify-center md:justify-start"
-            whileHover={{ scale: 1.1 }}
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <a
-              href={cvFile}
-              download="CV_MUHAMMAD FARHAN NABIL.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center px-6 py-3 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 transition duration-300 shadow-md"
-            >
-              <FaDownload className="mr-2" />
-              Download CV
-            </a>
-          </motion.div>
+  className="flex justify-center md:justify-start"
+  data-aos="fade-up"
+  data-aos-delay="400"
+>
+  <a
+    href={cvFile}
+    download="CV_MUHAMMAD FARHAN NABIL.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center px-6 py-3 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 transition duration-300 shadow-md"
+  >
+    <FaDownload className="mr-2" />
+    Download CV
+  </a>
+</motion.div>
+
         </motion.div>
       </motion.div>
     </motion.section>
