@@ -6,6 +6,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Services from './components/Services';
 import Certificate from './components/Certificate';
+import Project from './components/Project'; // Tambahkan import untuk Project
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -20,6 +21,7 @@ function App() {
           <Skills />
           <Services />
           <Certificate />
+          <Project /> {/* Tambahkan komponen Project di sini */}
           <Contact />
         </main>
         <Footer />

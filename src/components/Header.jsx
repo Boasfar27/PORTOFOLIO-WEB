@@ -4,7 +4,7 @@ import { BsSun, BsMoonStars, BsLaptop, BsList, BsX } from 'react-icons/bs';
 function Header() {
   const [theme, setTheme] = useState('system');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState('home'); // State untuk link aktif
+  const [activeLink, setActiveLink] = useState('home');
 
   useEffect(() => {
     if (theme === 'light') {
@@ -41,8 +41,8 @@ function Header() {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setActiveLink(sectionId); // Update link yang aktif
-      setIsMobileMenuOpen(false); // Tutup menu di mobile
+      setActiveLink(sectionId);
+      setIsMobileMenuOpen(false);
     }
   };
 
@@ -53,12 +53,11 @@ function Header() {
         : 'text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400'
     }`;
 
-  // Tambahkan scroll listener
   useEffect(() => {
-    const sections = ['home', 'about', 'skills', 'services', 'certificate', 'contact'];
+    const sections = ['home', 'about', 'skills', 'services', 'certificate', 'project', 'contact'];
 
     const handleScroll = () => {
-      let currentSection = 'home'; // Default section
+      let currentSection = 'home';
       sections.forEach((sectionId) => {
         const sectionElement = document.getElementById(sectionId);
         if (
@@ -101,6 +100,7 @@ function Header() {
         <a onClick={() => handleLinkClick('skills')} className={linkClasses('skills')}>Skills</a>
         <a onClick={() => handleLinkClick('services')} className={linkClasses('services')}>Services</a>
         <a onClick={() => handleLinkClick('certificate')} className={linkClasses('certificate')}>Certificate</a>
+        <a onClick={() => handleLinkClick('project')} className={linkClasses('project')}>Project</a>
         <a onClick={() => handleLinkClick('contact')} className={linkClasses('contact')}>Contact</a>
 
         <div className="ml-4 cursor-pointer" onClick={handleThemeSwitch}>
@@ -117,6 +117,7 @@ function Header() {
           <a onClick={() => handleLinkClick('skills')} className={linkClasses('skills')}>Skills</a>
           <a onClick={() => handleLinkClick('services')} className={linkClasses('services')}>Services</a>
           <a onClick={() => handleLinkClick('certificate')} className={linkClasses('certificate')}>Certificate</a>
+          <a onClick={() => handleLinkClick('project')} className={linkClasses('project')}>Project</a>
           <a onClick={() => handleLinkClick('contact')} className={linkClasses('contact')}>Contact</a>
           
           <div className="flex justify-center mt-4 cursor-pointer" onClick={handleThemeSwitch}>
