@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { BsSun, BsMoonStars, BsLaptop, BsList, BsX } from 'react-icons/bs';
 
 function Header() {
@@ -47,9 +47,9 @@ function Header() {
   };
 
   const linkClasses = (link) =>
-    `font-semibold transition-colors duration-300 cursor-pointer ${
+    `relative text-lg font-semibold transition-colors duration-300 cursor-pointer group ${
       activeLink === link
-        ? 'text-purple-600 dark:text-purple-400 border-b-2 border-purple-600'
+        ? 'text-purple-600 dark:text-purple-400'
         : 'text-gray-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400'
     }`;
 
@@ -77,13 +77,13 @@ function Header() {
 
   return (
     <header className="flex justify-between items-center p-5 bg-white shadow-md fixed w-full z-50 dark:bg-gray-900 transition-colors duration-300">
-      <h1 
+      <h1
         onClick={() => handleLinkClick('home')}
         className="text-2xl font-bold text-gray-900 dark:text-white cursor-pointer"
       >
         My Portfolio
       </h1>
-      
+
       <div className="md:hidden flex items-center">
         <div className="cursor-pointer" onClick={toggleMobileMenu}>
           {isMobileMenuOpen ? (
@@ -95,18 +95,41 @@ function Header() {
       </div>
 
       <nav className="hidden md:flex space-x-12 items-center">
-        <a onClick={() => handleLinkClick('home')} className={linkClasses('home')}>Home</a>
-        <a onClick={() => handleLinkClick('about')} className={linkClasses('about')}>About</a>
-        <a onClick={() => handleLinkClick('skills')} className={linkClasses('skills')}>Skills</a>
-        <a onClick={() => handleLinkClick('services')} className={linkClasses('services')}>Services</a>
-        <a onClick={() => handleLinkClick('certificate')} className={linkClasses('certificate')}>Certificate</a>
-        <a onClick={() => handleLinkClick('project')} className={linkClasses('project')}>Project</a>
-        <a onClick={() => handleLinkClick('contact')} className={linkClasses('contact')}>Contact</a>
+        {/* Tautan Navigasi dengan Animasi Span */}
+        {['home', 'about', 'skills', 'services', 'certificate', 'project', 'contact'].map(
+          (link) => (
+            <a
+              key={link}
+              onClick={() => handleLinkClick(link)}
+              className={linkClasses(link)}
+            >
+              {link.charAt(0).toUpperCase() + link.slice(1)}
+              <span
+                className="absolute left-0 bottom-0 w-0 h-1 bg-purple-600 transition-all duration-500 group-hover:w-full rounded-full"
+              ></span>
+            </a>
+          )
+        )}
 
         <div className="ml-4 cursor-pointer" onClick={handleThemeSwitch}>
-          {theme === 'light' && <BsSun className="text-yellow-500 hover:text-purple-600 transition-colors duration-300" size={24} />}
-          {theme === 'dark' && <BsMoonStars className="text-blue-500 hover:text-purple-600 transition-colors duration-300" size={24} />}
-          {theme === 'system' && <BsLaptop className="text-green-500 hover:text-purple-600 transition-colors duration-300" size={24} />}
+          {theme === 'light' && (
+            <BsSun
+              className="text-yellow-500 hover:text-purple-600 transition duration-300"
+              size={24}
+            />
+          )}
+          {theme === 'dark' && (
+            <BsMoonStars
+              className="text-blue-500 hover:text-purple-600 transition duration-300"
+              size={24}
+            />
+          )}
+          {theme === 'system' && (
+            <BsLaptop
+              className="text-green-500 hover:text-purple-600 transition duration-300"
+              size={24}
+            />
+          )}
         </div>
       </nav>
 

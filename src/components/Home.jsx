@@ -1,5 +1,5 @@
-import  React,{ useState, useEffect } from 'react';
-import { FaInstagram, FaGithub,FaTimes, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
+import { useState, useEffect } from 'react';
+import { FaInstagram, FaGithub, FaTimes, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -7,7 +7,6 @@ import profilePhoto from '../assets/FARHAN 1.PNG';
 
 function Home() {
   const [displayName, setDisplayName] = useState('');
-  const [contactType, setContactType] = useState(null); 
   const [isModalOpen, setIsModalOpen] = useState(false); // State to handle modal visibility
   const fullName = "Muhammad Farhan Nabil";
   const typingSpeed = 150;
@@ -65,7 +64,6 @@ function Home() {
   };
 
   const handleOptionSelect = (type) => {
-    setContactType(type); // Set the selected contact type
     const greeting = getGreeting();
     let message = '';
     
@@ -126,7 +124,7 @@ function Home() {
           className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white"
           data-aos="fade-up"
         >
-          Hello, I'm
+          Hello, I&apos;m
         </h1>
         <h2
           className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-purple-600 dark:text-purple-400 mt-4 min-h-[80px]"
@@ -168,37 +166,36 @@ function Home() {
       </motion.div>
 
       {isModalOpen && (
-  <div className="fixed inset-0 flex justify-center items-center bg-gray-900 bg-opacity-50 z-50">
-    <div className="relative bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl max-w-lg mx-auto transform transition-transform duration-300 scale-95 hover:scale-100">
-      <button
-        onClick={() => setIsModalOpen(false)} 
-        className="absolute top-3 right-3 text-gray-500 dark:text-gray-300 hover:text-red-500 transition duration-200"
-      >
-        <FaTimes size={24} />
-      </button>
+        <div className="fixed inset-0 flex justify-center items-center bg-gray-900 bg-opacity-50 z-50">
+          <div className="relative bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl max-w-lg mx-auto transform transition-transform duration-300 scale-95 hover:scale-100">
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="absolute top-3 right-3 text-gray-500 dark:text-gray-300 hover:text-red-500 transition duration-200"
+            >
+              <FaTimes size={24} />
+            </button>
 
-      <h2 className="text-2xl text-center text-gray-900 dark:text-white font-semibold mb-6">
-      Pilih Jenis Pertanyaan
-      </h2>
+            <h2 className="text-2xl text-center text-gray-900 dark:text-white font-semibold mb-6">
+            Pilih Kategori Pesan
+            </h2>
 
-      <div className="space-y-4">
-        <button
-          onClick={() => handleOptionSelect('recruitment')}
-          className="w-full py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-lg rounded-md shadow-md hover:from-blue-600 hover:to-blue-700 transition duration-300 ease-in-out transform hover:scale-105"
-        >
-          Pencarian Kandidat
-        </button>
-        <button
-          onClick={() => handleOptionSelect('general')}
-          className="w-full py-3 bg-gradient-to-r from-green-500 to-green-600 text-white text-lg rounded-md shadow-md hover:from-green-600 hover:to-green-700 transition duration-300 ease-in-out transform hover:scale-105"
-        >
-          Pertanyaan Umum
-        </button>
-      </div>
-    </div>
-  </div>
-)}
-
+            <div className="space-y-4">
+              <button
+                onClick={() => handleOptionSelect('recruitment')}
+                className="w-full py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-lg rounded-md shadow-md hover:from-blue-600 hover:to-blue-700 transition duration-300 ease-in-out transform hover:scale-105"
+              >
+                Pencarian Kandidat
+              </button>
+              <button
+                onClick={() => handleOptionSelect('general')}
+                className="w-full py-3 bg-gradient-to-r from-green-500 to-green-600 text-white text-lg rounded-md shadow-md hover:from-green-600 hover:to-green-700 transition duration-300 ease-in-out transform hover:scale-105"
+              >
+                Pertanyaan Umum
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </motion.section>
   );
 }

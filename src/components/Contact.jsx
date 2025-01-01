@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import  { useContext, useState, useEffect } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 import { FaInstagram, FaGithub, FaWhatsapp, FaEnvelope, FaPaperPlane } from 'react-icons/fa';
 import emailjs from 'emailjs-com';

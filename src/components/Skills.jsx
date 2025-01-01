@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types'; // Import PropTypes untuk validasi props
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -72,6 +73,16 @@ function SkillCard({ skill, cardBackgroundColor }) {
   );
 }
 
+// Validasi props menggunakan PropTypes
+SkillCard.propTypes = {
+  skill: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired,
+  }).isRequired,
+  cardBackgroundColor: PropTypes.string.isRequired,
+};
+
 function Skills() {
   const { theme } = useContext(ThemeContext);
 
@@ -103,6 +114,13 @@ function Skills() {
       >
         Skills
       </motion.h2>
+      <p
+        className="text-xl font-semibold text-green-500 mb-8"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        My Skills
+      </p>
       <motion.div
         className="flex justify-center flex-wrap gap-6 px-4"
         initial={{ opacity: 0 }}
