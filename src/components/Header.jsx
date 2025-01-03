@@ -95,7 +95,6 @@ function Header() {
       </div>
 
       <nav className="hidden md:flex space-x-12 items-center">
-        {/* Tautan Navigasi dengan Animasi Span */}
         {['home', 'about', 'skills', 'services', 'certificate', 'project', 'contact'].map(
           (link) => (
             <a
@@ -134,20 +133,43 @@ function Header() {
       </nav>
 
       {isMobileMenuOpen && (
-        <div className="absolute top-16 right-0 bg-white dark:bg-gray-800 shadow-lg rounded-lg w-full max-w-xs p-4 flex flex-col space-y-4 z-40 md:hidden">
-          <a onClick={() => handleLinkClick('home')} className={linkClasses('home')}>Home</a>
-          <a onClick={() => handleLinkClick('about')} className={linkClasses('about')}>About</a>
-          <a onClick={() => handleLinkClick('skills')} className={linkClasses('skills')}>Skills</a>
-          <a onClick={() => handleLinkClick('services')} className={linkClasses('services')}>Services</a>
-          <a onClick={() => handleLinkClick('certificate')} className={linkClasses('certificate')}>Certificate</a>
-          <a onClick={() => handleLinkClick('project')} className={linkClasses('project')}>Project</a>
-          <a onClick={() => handleLinkClick('contact')} className={linkClasses('contact')}>Contact</a>
-          
-          <div className="flex justify-center mt-4 cursor-pointer" onClick={handleThemeSwitch}>
-            {theme === 'light' && <BsSun className="text-yellow-500 hover:text-purple-600 transition-colors duration-300" size={24} />}
-            {theme === 'dark' && <BsMoonStars className="text-blue-500 hover:text-purple-600 transition-colors duration-300" size={24} />}
-            {theme === 'system' && <BsLaptop className="text-green-500 hover:text-purple-600 transition-colors duration-300" size={24} />}
+        <div className="fixed inset-0 bg-white dark:bg-gray-900 flex flex-col justify-center items-center space-y-8 z-40">
+          {['home', 'about', 'skills', 'services', 'certificate', 'project', 'contact'].map((link) => (
+            <a
+              key={link}
+              onClick={() => handleLinkClick(link)}
+              className={`${linkClasses(link)} text-2xl`}
+            >
+              {link.charAt(0).toUpperCase() + link.slice(1)}
+            </a>
+          ))}
+
+          <div className="mt-4 cursor-pointer" onClick={handleThemeSwitch}>
+            {theme === 'light' && (
+              <BsSun
+                className="text-yellow-500 hover:text-purple-600 transition-colors duration-300"
+                size={32}
+              />
+            )}
+            {theme === 'dark' && (
+              <BsMoonStars
+                className="text-blue-500 hover:text-purple-600 transition-colors duration-300"
+                size={32}
+              />
+            )}
+            {theme === 'system' && (
+              <BsLaptop
+                className="text-green-500 hover:text-purple-600 transition-colors duration-300"
+                size={32}
+              />
+            )}
           </div>
+          <button
+            onClick={toggleMobileMenu}
+            className="absolute top-4 right-4 text-gray-900 dark:text-white text-2xl"
+          >
+            <BsX />
+          </button>
         </div>
       )}
     </header>

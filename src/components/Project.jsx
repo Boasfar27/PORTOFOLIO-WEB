@@ -99,11 +99,12 @@ function Project() {
                 </a>
 
                 {/* Hover Warna Pink dengan Teks Teknologi */}
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-pink-500 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-sm md:text-base lg:text-lg font-semibold">
-                    {project.technologies}
-                  </p>
-                </div>
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-pink-500 flex justify-center items-center opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-3 transition-all duration-500 ease-in-out">
+  <p className="text-white text-sm md:text-base lg:text-lg font-semibold">
+    {project.technologies}
+  </p>
+</div>
+
               </div>
             </motion.div>
           ))}
