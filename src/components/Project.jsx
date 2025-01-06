@@ -4,8 +4,6 @@ import { FiExternalLink } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
-// Import gambar lokal
 import image1 from '../assets/CONTOH.png';
 
 
