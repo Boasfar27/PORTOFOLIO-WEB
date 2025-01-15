@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: "/PORTOFOLIO-WEB/",
   build: {
-    outDir: 'build', // Ganti 'build' dengan nama folder output yang Anda inginkan
+    outDir: 'build', 
   },
   plugins: [react()],
 })

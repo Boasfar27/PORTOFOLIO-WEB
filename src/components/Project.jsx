@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import image1 from '../assets/CONTOH.png';
+import image2 from '../assets/CONTOH1.png';
 
 
 const projects = [
@@ -16,7 +17,7 @@ const projects = [
   },
   {
     id: 2,
-    image: image1, // Menggunakan gambar lokal
+    image: image2, // Menggunakan gambar lokal
     link: 'https://example.com/project-2',
     technologies: 'Vue, Bootstrap, Express',
   },
@@ -98,10 +99,10 @@ function Project() {
 
                 {/* Hover Warna Pink dengan Teks Teknologi */}
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-pink-500 flex justify-center items-center opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-3 transition-all duration-500 ease-in-out">
-  <p className="text-white text-sm md:text-base lg:text-lg font-semibold">
-    {project.technologies}
-  </p>
-</div>
+                  <p className="text-white text-sm md:text-base lg:text-lg font-semibold">
+                    {project.technologies}
+                  </p>
+                </div>
 
               </div>
             </motion.div>
