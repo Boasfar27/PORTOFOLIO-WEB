@@ -116,3 +116,4 @@ function Project() {
 export default Project;
 //masih  dalam perubahan
 //masih mager coding
+//masih mager ngoding heheheh 17januari2025
