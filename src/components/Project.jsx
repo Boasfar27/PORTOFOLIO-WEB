@@ -13,19 +13,19 @@ const projects = [
     id: 1,
     image: image1, // Menggunakan gambar lokal
     link: 'https://example.com/project-1',
-    technologies: 'React, TailwindCSS, Node.js',
+    technologies: '',
   },
   {
     id: 2,
     image: image2, // Menggunakan gambar lokal
-    link: 'https://example.com/project-2',
-    technologies: 'Vue, Bootstrap, Express',
+    link: 'https://premiumeveryday.my.id/',
+    technologies: 'Html5, TailwindCSS, Javascript',
   },
   {
     id: 3,
     image: image1, // Menggunakan gambar lokal
     link: 'https://example.com/project-3',
-    technologies: 'Angular, Material UI, Firebase',
+    technologies: '',
   },
 ];
 
@@ -114,6 +114,4 @@ function Project() {
 }
 
 export default Project;
-//masih  dalam perubahan
-//masih mager coding
-//masih mager ngoding heheheh 17januari2025
+
