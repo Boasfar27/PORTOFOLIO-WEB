@@ -28,7 +28,7 @@ function Contact() {
     const { name, value } = e.target;
 
     if (name === 'message') {
-      const wordCount = value.trim().split(/\s+/).filter(Boolean).length; // Hitung kata
+      const wordCount = value.trim().split(/\s+/).filter(Boolean).length; 
       if (wordCount > 500) {
         Swal.fire({
           icon: 'error',
@@ -48,14 +48,14 @@ function Contact() {
     emailjs
       .send(
         'service_rkbaiya',
-        'template_a42xu2x',
+        'template_7bghmex',
         {
           from_name: formData.name,
           message: formData.message,
           email: formData.email,
           to_name: 'Farhan',
         },
-        'iUxtbetF6UT29FspJ'
+        'mEbd9WRZIqlcbJCBd'
       )
       .then(
         () => {
@@ -187,3 +187,4 @@ function Contact() {
 }
 
 export default Contact;
+

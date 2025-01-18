@@ -4,7 +4,7 @@ import { FiExternalLink } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import image1 from '../assets/CONTOH.png';
+import image1 from '../assets/KOSONG.png';
 import image2 from '../assets/CONTOH1.png';
 
 
