@@ -54,7 +54,7 @@ function Header() {
     }`;
 
   useEffect(() => {
-    const sections = ['home', 'about', 'skills', 'services', 'certificate', 'project', 'contact'];
+    const sections = ['about', 'skills', 'services', 'certificate', 'project', 'contact'];
 
     const handleScroll = () => {
       let currentSection = 'home';
@@ -95,7 +95,7 @@ function Header() {
       </div>
 
       <nav className="hidden md:flex space-x-12 items-center">
-        {['home', 'about', 'skills', 'services', 'certificate', 'project', 'contact'].map(
+        {['about', 'skills', 'services', 'certificate', 'project', 'contact'].map(
           (link) => (
             <a
               key={link}
@@ -134,7 +134,7 @@ function Header() {
 
       {isMobileMenuOpen && (
         <div className="fixed inset-0 bg-white dark:bg-gray-900 flex flex-col justify-center items-center space-y-8 z-40">
-          {['home', 'about', 'skills', 'services', 'certificate', 'project', 'contact'].map((link) => (
+          {['about', 'skills', 'services', 'certificate', 'project', 'contact'].map((link) => (
             <a
               key={link}
               onClick={() => handleLinkClick(link)}

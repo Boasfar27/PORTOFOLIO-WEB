@@ -11,19 +11,19 @@ import image2 from '../assets/CONTOH1.png';
 const projects = [
   {
     id: 1,
-    image: image1, // Menggunakan gambar lokal
+    image: image1, 
     link: 'https://example.com/project-1',
     technologies: '',
   },
   {
     id: 2,
-    image: image2, // Menggunakan gambar lokal
+    image: image2, 
     link: 'https://premiumeveryday.my.id/',
-    technologies: 'Html5, TailwindCSS, Javascript',
+    technologies: 'PHP, TailwindCSS, Javascript & MySql',
   },
   {
     id: 3,
-    image: image1, // Menggunakan gambar lokal
+    image: image1, 
     link: 'https://example.com/project-3',
     technologies: '',
   },
@@ -72,7 +72,7 @@ function Project() {
           {projects.map((project) => (
             <motion.div
               key={project.id}
-              className={`rounded-2xl shadow-lg overflow-hidden relative transition-transform transform hover:scale-105 duration-300 ${
+              className={`w-full max-w-[420px] mx-auto rounded-lg shadow-md overflow-hidden relative transition-transform transform hover:scale-105 duration-300 ${
                 theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-black'
               }`}
               style={{ width: '100%', height: '420px' }}
@@ -82,7 +82,7 @@ function Project() {
               <div className="relative group h-full">
                 {/* Gambar Proyek */}
                 <img
-                  src={project.image} // Menggunakan gambar lokal
+                  src={project.image} 
                   alt={`Project ${project.id}`}
                   className="w-full h-full object-cover"
                 />

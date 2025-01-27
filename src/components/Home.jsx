@@ -3,11 +3,11 @@ import { FaInstagram, FaGithub, FaTimes, FaWhatsapp, FaLinkedin } from 'react-ic
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import profilePhoto from '../assets/FARHAN 1.PNG';
+import profilePhoto from '../assets/FARHAN.PNG';
 
 function Home() {
   const [displayName, setDisplayName] = useState('');
-  const [isModalOpen, setIsModalOpen] = useState(false); // State to handle modal visibility
+  const [isModalOpen, setIsModalOpen] = useState(false); 
   const fullName = "Muhammad Farhan Nabil";
   const typingSpeed = 150;
   const delayBeforeRestart = 2000;
@@ -60,14 +60,13 @@ function Home() {
   };
 
   const handleContactMeClick = () => {
-    setIsModalOpen(true); // Open modal when "Contact Me" is clicked
+    setIsModalOpen(true); 
   };
 
   const handleOptionSelect = (type) => {
     const greeting = getGreeting();
     let message = '';
     
-    // Construct message based on selected type
     if (type === 'recruitment') {
       message = `${greeting}, Farhan.\n\nPerkenalkan, saya [Nama HRD/HR] dari [PT APA]. Kami tertarik dengan portofolio Anda sebagai Frontend Developer, terutama pada proyek-proyek yang Anda kerjakan sebelumnya yang terlihat sangat inovatif.\n\nKami ingin menawarkan Anda posisi sebagai Frontend Developer di perusahaan kami, dengan fokus pada pengembangan antarmuka aplikasi web modern dan responsif. Jika Anda tertarik, kami dapat mendiskusikan lebih lanjut mengenai detail pekerjaan ini dan proses seleksi.\n\nApakah Anda memiliki waktu untuk berdiskusi lebih lanjut?`;
     } else {

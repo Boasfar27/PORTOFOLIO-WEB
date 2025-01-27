@@ -94,7 +94,7 @@ function Certificate() {
             rel="noopener noreferrer"
             className={`w-full max-w-[350px] mx-auto rounded-lg shadow-md transition-all duration-300 ${cardBackgroundColor} dark:bg-gray-800 hover:shadow-lg hover:shadow-green-500 hover:scale-105`}
             data-aos="zoom-in"
-            data-aos-delay={index * 100} // Delay untuk animasi setiap item
+            data-aos-delay={index * 100} 
             whileHover={{ scale: 1.05 }}
           >
             <div className="aspect-w-16 aspect-h-9 w-full h-auto rounded-lg overflow-hidden">

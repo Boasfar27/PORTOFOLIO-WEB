@@ -6,29 +6,32 @@ import 'aos/dist/aos.css';
 import { ThemeContext } from '../context/ThemeContext';
 import atom from '../assets/atom.png';
 import bootstrap from '../assets/bootstrap.png';
-import cSharp from '../assets/c-sharp.png';
+import tailwindcss from '../assets/tailwindcss.png';
 import css3 from '../assets/css-3.png';
 import figma from '../assets/figma.png';
 import html5 from '../assets/html-5.png';
-import illustrator from '../assets/illustrator.png';
 import js from '../assets/js.png';
 import python from '../assets/python.png';
-import swift from '../assets/swift.png';
+import php from '../assets/php.png';
 import typescript from '../assets/typescript.png';
+import vite from '../assets/vite.png';
+import vue from '../assets/vue.png';
 
 const skills = [
   { name: 'HTML5', image: html5, color: 'rgb(227, 66, 52)' },
   { name: 'CSS3', image: css3, color: 'rgb(13, 202, 240)' },
-  { name: 'Atom', image: atom, color: 'rgb(59, 130, 246)' },
   { name: 'Bootstrap', image: bootstrap, color: 'rgb(102, 51, 153)' },
   { name: 'JavaScript', image: js, color: 'rgb(240, 219, 79)' },
-  { name: 'C#', image: cSharp, color: 'rgb(128, 0, 128)' },
+  { name: 'TailwindCSS', image: tailwindcss, color: 'rgb(51, 153, 255)' },
   { name: 'Python', image: python, color: 'rgb(52, 140, 49)' },
-  { name: 'Swift', image: swift, color: 'rgb(255, 69, 58)' },
+  { name: 'Atom', image: atom, color: 'rgb(59, 130, 246)' },
   { name: 'TypeScript', image: typescript, color: 'rgb(0, 122, 204)' },
+  { name: 'PHP', image: php, color: 'rgb(67, 80, 190)' },
+  { name: 'Vite', image: vite, color: 'rgb(30, 94, 236)' },
+  { name: 'Vue.js', image: vue, color: 'rgb(40, 144, 120)' },
   { name: 'Figma', image: figma, color: 'rgb(255, 136, 0)' },
-  { name: 'Illustrator', image: illustrator, color: 'rgb(255, 204, 0)' },
 ];
+
 
 function SkillCard({ skill, cardBackgroundColor }) {
   const [isHovered, setIsHovered] = React.useState(false);
