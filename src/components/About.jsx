@@ -85,7 +85,7 @@ function About() {
           >
             Saya mahasiswa Program Studi Sistem Informasi di Universitas Negeri Surabaya, saat ini sedang menempuh&nbsp;
             <span className="text-orange-500">semester 4</span>
-            &nbsp;Menjadi seorang programmer sudah menjadi cita-cita saya sejak 3 tahun lalu saat masih duduk di bangku SMA. Saya sangat tertarik untuk mengembangkan kemampuan di bidang teknologi informasi, khususnya pengembangan website dengan fokus sebagai Front-End Developer. Saya juga aktif di organisasi HIPMI PT UNESA sebagai Ketua Bidang Industri Kreatif dan Sosial Media, dan memiliki semangat untuk terus belajar agar dapat mengikuti perkembangan teknologi yang terus berkembang di masa kini dan masa yang akan datang.
+            &nbsp;Menjadi seorang programmer sudah menjadi cita-cita saya sejak 3 tahun lalu saat masih duduk di bangku SMA. Saya sangat tertarik untuk mengembangkan kemampuan di bidang teknologi informasi, khususnya pengembangan website dengan fokus sebagai Full Stack Developer. Saya juga aktif di organisasi HIPMI PT UNESA sebagai Ketua Bidang Industri Kreatif dan Sosial Media, dan memiliki semangat untuk terus belajar agar dapat mengikuti perkembangan teknologi yang terus berkembang di masa kini dan masa yang akan datang.
           </motion.p>
 
           <motion.div className="space-y-2 mb-6" data-aos="fade-up" data-aos-delay="300">

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types'; // Import PropTypes untuk validasi props
-import { motion } from 'framer-motion';
+import { color, motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ThemeContext } from '../context/ThemeContext';
@@ -16,6 +16,7 @@ import php from '../assets/php.png';
 import typescript from '../assets/typescript.png';
 import vite from '../assets/vite.png';
 import vue from '../assets/vue.png';
+import laravel from '../assets/laravel.svg';
 
 const skills = [
   { name: 'HTML5', image: html5, color: 'rgb(227, 66, 52)' },
@@ -30,6 +31,7 @@ const skills = [
   { name: 'Vite', image: vite, color: 'rgb(30, 94, 236)' },
   { name: 'Vue.js', image: vue, color: 'rgb(40, 144, 120)' },
   { name: 'Figma', image: figma, color: 'rgb(255, 136, 0)' },
+  {name: 'laravel', image:laravel, color: 'rgb(239, 68, 68)'},
 ];
 
 

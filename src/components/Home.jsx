@@ -7,7 +7,7 @@ import profilePhoto from '../assets/FARHAN.PNG';
 
 function Home() {
   const [displayName, setDisplayName] = useState('');
-  const [isModalOpen, setIsModalOpen] = useState(false); 
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const fullName = "Muhammad Farhan Nabil";
   const typingSpeed = 150;
   const delayBeforeRestart = 2000;
@@ -60,15 +60,15 @@ function Home() {
   };
 
   const handleContactMeClick = () => {
-    setIsModalOpen(true); 
+    setIsModalOpen(true);
   };
 
   const handleOptionSelect = (type) => {
     const greeting = getGreeting();
     let message = '';
-    
+
     if (type === 'recruitment') {
-      message = `${greeting}, Farhan.\n\nPerkenalkan, saya [Nama HRD/HR] dari [PT APA]. Kami tertarik dengan portofolio Anda sebagai Frontend Developer, terutama pada proyek-proyek yang Anda kerjakan sebelumnya yang terlihat sangat inovatif.\n\nKami ingin menawarkan Anda posisi sebagai Frontend Developer di perusahaan kami, dengan fokus pada pengembangan antarmuka aplikasi web modern dan responsif. Jika Anda tertarik, kami dapat mendiskusikan lebih lanjut mengenai detail pekerjaan ini dan proses seleksi.\n\nApakah Anda memiliki waktu untuk berdiskusi lebih lanjut?`;
+      message = `${greeting}, Farhan.\n\nPerkenalkan, saya [Nama HRD/HR] dari [PT APA]. Kami tertarik dengan portofolio Anda sebagai Full Stack Developer, terutama pada proyek-proyek yang Anda kerjakan sebelumnya yang terlihat sangat inovatif.\n\nKami ingin menawarkan Anda posisi sebagai Full Stack Developer di perusahaan kami, dengan fokus pada pengembangan antarmuka aplikasi web modern dan responsif. Jika Anda tertarik, kami dapat mendiskusikan lebih lanjut mengenai detail pekerjaan ini dan proses seleksi.\n\nApakah Anda memiliki waktu untuk berdiskusi lebih lanjut?`;
     } else {
       message = `${greeting}, Farhan.\n\nSaya ingin menghubungi Anda untuk berdiskusi lebih lanjut mengenai proyek yang Anda kerjakan. Saya sangat tertarik dengan portofolio Anda, dan saya rasa ada potensi kolaborasi yang menarik.\n\nApakah Anda memiliki waktu untuk berbincang lebih lanjut?`;
     }
@@ -137,7 +137,7 @@ function Home() {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          Programmer junior yang profesional dan berorientasi pada detail dengan keahlian dalam pengembangan front-end. Siap menghadirkan solusi antarmuka yang responsif dan inovatif, serta berkomitmen untuk terus belajar dan berkontribusi secara maksimal.
+          Programmer junior yang profesional dan berorientasi pada detail dengan keahlian dalam pengembangan Full Stack Developer. Siap menghadirkan solusi antarmuka yang responsif dan inovatif, serta berkomitmen untuk terus belajar dan berkontribusi secara maksimal.
         </p>
         <motion.button
           onClick={handleContactMeClick}
@@ -175,7 +175,7 @@ function Home() {
             </button>
 
             <h2 className="text-2xl text-center text-gray-900 dark:text-white font-semibold mb-6">
-            Pilih Kategori Pesan
+              Pilih Kategori Pesan
             </h2>
 
             <div className="space-y-4">
