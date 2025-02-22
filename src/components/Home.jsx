@@ -3,7 +3,7 @@ import { FaInstagram, FaGithub, FaTimes, FaWhatsapp, FaLinkedin } from 'react-ic
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import profilePhoto from '../assets/FARHAN.PNG';
+import profilePhoto from '../assets/FARHAN.webp';
 
 function Home() {
   const [displayName, setDisplayName] = useState('');

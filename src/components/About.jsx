@@ -2,7 +2,7 @@ import { useEffect } from 'react'; // Hapus React jika tidak digunakan
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import profilePhoto from '../assets/FARHAN 2.PNG';
+import profilePhoto from '../assets/FARHAN 2.webp';
 import cvFile from '../assets/CV_MUHAMMAD FARHAN NABIL.pdf';
 import { FaUser, FaPhoneAlt, FaEnvelope, FaDownload } from 'react-icons/fa';
 

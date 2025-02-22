@@ -81,7 +81,7 @@ function Header() {
         onClick={() => handleLinkClick('home')}
         className="text-2xl font-bold text-gray-900 dark:text-white cursor-pointer"
       >
-        My Portfolio
+        Boasfar..
       </h1>
 
       <div className="md:hidden flex items-center">
@@ -94,7 +94,7 @@ function Header() {
         </div>
       </div>
 
-      <nav className="hidden md:flex space-x-12 items-center">
+      <nav className="hidden md:flex space-x-10 items-center">
         {['about', 'skills', 'services', 'certificate', 'project', 'contact'].map(
           (link) => (
             <a
