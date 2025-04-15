@@ -7,6 +7,7 @@ import 'aos/dist/aos.css';
 import image1 from '../assets/KOSONG.png';
 import image2 from '../assets/CONTOH1.webp';
 import image3 from '../assets/CONTOH2.webp';
+import image4 from '../assets/photoboth.webp';
 
 // Import logo teknologi
 import laravelLogo from '../assets/laravel.svg';
@@ -14,7 +15,7 @@ import viteLogo from '../assets/vite.png';
 import tailwindLogo from '../assets/tailwindcss.png';
 import phpLogo from '../assets/php.png';
 import jsLogo from '../assets/js.png';
-
+import reactLogo from '../assets/atom.png';
 const projects = [
   {
     id: 1,
@@ -46,12 +47,16 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Coming Soon',
-    description: 'Project baru akan segera hadir',
-    image: image1,
-    link: 'https://example.com/project-3',
-    github: 'https://github.com/yourusername/project3',
-    technologies: [{ name: 'Under Development', logo: '' }],
+    title: 'Photo Booth',
+    description: 'Aplikasi web untuk membuat foto booth untuk kebutuhan anda',
+    image: image4,
+    link: 'https://photoboxboasfar.my.id/',
+    github: 'https://github.com/Boasfar27/photobox-react',
+    technologies: [
+      { name: 'React', logo: reactLogo },
+      { name: 'TailwindCSS', logo: tailwindLogo },
+      { name: 'Javascript', logo: jsLogo }
+    ],
     gradient: 'from-green-500 to-emerald-500'
   },
 ];
