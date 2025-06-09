@@ -11,6 +11,7 @@ import certificate7 from '../assets/SERTIFIKAT 7.jpg';
 import certificate8 from '../assets/SERTIFIKAT 8.jpg';
 import certificate9 from '../assets/SERTIFIKAT 9.jpg';
 import certificate10 from '../assets/SERTIFIKAT 11.jpg';
+import certificate11 from '../assets/sertifikatdbklik.webp';
 
 function Certificate() {
   const { theme } = useContext(ThemeContext);
@@ -19,6 +20,10 @@ function Certificate() {
 
   // Daftar sertifikat dengan gambar dan link masing-masing
   const certificates = [
+    {
+      image: certificate11,
+      link: 'https://boasfardev.com',
+    },
     {
       image: certificate3,
       link: 'https://www.dicoding.com/certificates/81P2N6MOJXOY',
@@ -47,10 +52,10 @@ function Certificate() {
       image: certificate7,
       link: 'https://www.codepolitan.com/c/EKOZT35/',
     },
-    {
-      image: certificate2,
-      link: 'https://certificates.revou.co/muhammad-farhan-nabil-certificate-attendance-sefc.pdf',
-    },
+    // {
+    //   image: certificate2,
+    //   link: 'https://certificates.revou.co/muhammad-farhan-nabil-certificate-attendance-sefc.pdf',
+    // },
   ];
 
   useEffect(() => {
@@ -94,7 +99,7 @@ function Certificate() {
             rel="noopener noreferrer"
             className={`w-full max-w-[350px] mx-auto rounded-lg shadow-md transition-all duration-300 ${cardBackgroundColor} dark:bg-gray-800 hover:shadow-lg hover:shadow-green-500 hover:scale-105`}
             data-aos="zoom-in"
-            data-aos-delay={index * 100} 
+            data-aos-delay={index * 100}
             whileHover={{ scale: 1.05 }}
           >
             <div className="aspect-w-16 aspect-h-9 w-full h-auto rounded-lg overflow-hidden">

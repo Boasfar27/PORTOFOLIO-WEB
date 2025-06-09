@@ -8,6 +8,8 @@ import image1 from '../assets/KOSONG.png';
 import image2 from '../assets/CONTOH1.webp';
 import image3 from '../assets/CONTOH2.webp';
 import image4 from '../assets/photoboth.webp';
+import image5 from '../assets/sisteminformasidesa.webp';
+import image6 from '../assets/perpustakan.webp';
 
 // Import logo teknologi
 import laravelLogo from '../assets/laravel.svg';
@@ -17,6 +19,7 @@ import phpLogo from '../assets/php.png';
 import jsLogo from '../assets/js.png';
 import reactLogo from '../assets/atom.png';
 const projects = [
+
   {
     id: 1,
     title: 'Image Converter',
@@ -58,6 +61,34 @@ const projects = [
       { name: 'Javascript', logo: jsLogo }
     ],
     gradient: 'from-green-500 to-emerald-500'
+  },
+  {
+    id: 4,
+    title: 'Sistem Informasi Desa ',
+    description: 'Aplikasi web untuk pengajuan surat kebutuhan masyarakat',
+    image: image5,
+    link: 'https://telukdalem.my.id/',
+    github: 'https://github.com/Boasfar27/',
+    technologies: [
+      { name: 'Laravel', logo: laravelLogo },
+      { name: 'Vite', logo: viteLogo },
+      { name: 'TailwindCSS', logo: tailwindLogo }
+    ],
+    gradient: 'from-blue-500 to-cyan-500'
+  },
+  {
+    id: 5,
+    title: 'Perpustakan Digital',
+    description: 'Aplikasi web untuk siswa dan siswi pada sekolah SMP 01 RUMPIN',
+    image: image6,
+    link: 'https://sipussmpn01rumpin.my.id/',
+    github: 'https://github.com/Boasfar27/',
+    technologies: [
+      { name: 'Laravel', logo: laravelLogo },
+      { name: 'Vite', logo: viteLogo },
+      { name: 'TailwindCSS', logo: tailwindLogo }
+    ],
+    gradient: 'from-blue-500 to-cyan-500'
   },
 ];
 
