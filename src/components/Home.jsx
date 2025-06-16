@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FaInstagram, FaGithub, FaTimes, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram, FaGithub, FaTimes, FaWhatsapp, FaLinkedin, FaGlobe } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -118,6 +118,15 @@ function Home() {
           >
             <FaLinkedin size={24} />
           </motion.a>
+          <motion.a
+            href="https://boasfardev.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300"
+            whileHover={{ scale: 1.2 }}
+          >
+            <FaGlobe size={24} />
+          </motion.a>
         </div>
         <h1
           className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white"
@@ -137,7 +146,7 @@ function Home() {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          Programmer junior yang profesional dan berorientasi pada detail dengan keahlian dalam pengembangan Full Stack Developer. Siap menghadirkan solusi antarmuka yang responsif dan inovatif, serta berkomitmen untuk terus belajar dan berkontribusi secara maksimal.
+          Programmer profesional dan berorientasi pada detail dengan keahlian dalam pengembangan Full Stack Developer. Siap menghadirkan solusi antarmuka yang responsif dan inovatif, serta berkomitmen untuk terus belajar dan berkontribusi secara maksimal.
         </p>
         <motion.button
           onClick={handleContactMeClick}
