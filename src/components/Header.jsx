@@ -15,10 +15,10 @@ function Header() {
 
   const navLinks = [
     { id: 'about', icon: BiUser, label: 'About' },
+    { id: 'project', icon: AiOutlineProject, label: 'Project' },
+    { id: 'certificate', icon: MdOutlineMilitaryTech, label: 'Certificate' },
     { id: 'skills', icon: BiCode, label: 'Skills' },
     { id: 'services', icon: MdOutlineDesignServices, label: 'Services' },
-    { id: 'certificate', icon: MdOutlineMilitaryTech, label: 'Certificate' },
-    { id: 'project', icon: AiOutlineProject, label: 'Project' },
     { id: 'contact', icon: AiOutlineContacts, label: 'Contact' },
   ];
 
@@ -114,7 +114,7 @@ function Header() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-         
+
           <motion.h1
             onClick={() => handleLinkClick('home')}
             className="text-2xl font-bold text-gray-900 dark:text-white cursor-pointer"

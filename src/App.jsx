@@ -1,7 +1,7 @@
 // import React from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import Header from './components/Header';
-import Home from './components/Home'; 
+import Home from './components/Home';
 import About from './components/About';
 import Skills from './components/Skills';
 import Services from './components/Services';
@@ -16,12 +16,12 @@ function App() {
       <div className="bg-white text-gray-900 dark:bg-gray-900 transition-colors duration-300 min-h-screen">
         <Header />
         <main>
-          <Home /> 
+          <Home />
           <About />
+          <Project />
+          <Certificate />
           <Skills />
           <Services />
-          <Certificate />
-          <Project /> {/* Tambahkan komponen Project di sini */}
           <Contact />
         </main>
         <Footer />
