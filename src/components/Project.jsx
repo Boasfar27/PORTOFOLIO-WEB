@@ -10,6 +10,10 @@ import image3 from '../assets/CONTOH2.webp';
 import image4 from '../assets/photoboth.webp';
 import image5 from '../assets/sisteminformasidesa.webp';
 import image6 from '../assets/perpustakan.webp';
+import image7 from '../assets/apotekditha.webp';
+import image8 from '../assets/cahkost.webp';
+import image9 from '../assets/vagata.webp';
+import image10 from '../assets/orieda.webp';
 
 // Import logo teknologi
 import laravelLogo from '../assets/laravel.svg';
@@ -18,6 +22,8 @@ import tailwindLogo from '../assets/tailwindcss.png';
 import phpLogo from '../assets/php.png';
 import jsLogo from '../assets/js.png';
 import reactLogo from '../assets/atom.png';
+import BsBootstrap from '../assets/bootstrap.png';
+import { desc, image, title } from 'framer-motion/client';
 const projects = [
 
   {
@@ -90,6 +96,65 @@ const projects = [
     ],
     gradient: 'from-blue-500 to-cyan-500'
   },
+
+  {
+    id: 6,
+    title: 'Apotek Ditha',
+    description: 'Apotek Online Terpercaya - Jual obat-obatan, vitamin, suplemen, alat kesehatan, produk kecantikan dan kebutuhan medis lainnya. Pelayanan profesional dengan pengiriman cepat ke seluruh Indonesia.',
+    image: image7,
+    link: 'https://apotekditha.com/',
+    github: 'https://apotekditha.com/',
+    technologies: [
+      { name: 'Laravel', logo: laravelLogo },
+      { name: 'Vite', logo: viteLogo },
+      { name: 'TailwindCSS', logo: tailwindLogo }
+    ],
+    gradient: 'from-blue-500 to-cyan-500'
+  },
+  {
+    id: 7,
+    title: 'Cahkost',
+    description: 'Website untuk penyewaan kos-kosan di daerah Surabaya, Untuk mahasiswa Universias Negeri Surabaya',
+    image: image8,
+    link: 'http://cahkost.my.id/',
+    github: 'http://cahkost.my.id/',
+    technologies: [
+      { name: 'Laravel', logo: laravelLogo },
+      { name: 'Vite', logo: viteLogo },
+      { name: 'TailwindCSS', logo: tailwindLogo }
+    ],
+    gradient: 'from-blue-500 to-cyan-500'
+  },
+  {
+    id: 8,
+    title: 'Vagata Coffee Shop',
+    description: 'Vagata Coffee - Secangkir Kopi, Seribu Cerita. Menyajikan kopi berkualitas tinggi dari berbagai daerah di Indonesia.',
+    image: image9,
+    link: 'https://vagatacoffe.my.id/',
+    github: 'https://vagatacoffe.my.id/',
+    technologies: [
+      { name: 'Laravel', logo: laravelLogo },
+      { name: 'Vite', logo: viteLogo },
+      { name: 'TailwindCSS', logo: tailwindLogo }
+    ],
+    gradient: 'from-blue-500 to-cyan-500'
+  },
+
+  {
+    id: 9,
+    title: 'Orieda',
+    description: 'LPK ORIEDA SATU INDONESIA - Lembaga pelatihan bahasa Jepang terpercaya untuk persiapan kerja di Jepang. Berlokasi di Madiun, Jawa Timur.',
+    image: image10,
+    link: 'https://oriedasatuindonesia.id/',
+    github: 'https://oriedasatuindonesia.id/',
+    technologies: [
+      { name: 'Laravel', logo: laravelLogo },
+      { name: 'Vite', logo: viteLogo },
+      { name: 'TailwindCSS', logo: tailwindLogo },
+      { name: 'Bootstrap', logo: BsBootstrap }
+    ],
+    gradient: 'from-blue-500 to-cyan-500'
+  }
 ];
 
 function Project() {
