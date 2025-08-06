@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import profilePhoto from '../assets/FARHAN 2.webp';
-import cvFile from '../assets/CV_MUHAMMAD FARHAN NABIL.pdf';
+import cvFile from '../assets/Muhammad Farhan Nabil_CV.pdf';
 import { FaUser, FaPhoneAlt, FaEnvelope, FaDownload } from 'react-icons/fa';
 
 function About() {
@@ -110,7 +110,7 @@ function About() {
           >
             <a
               href={cvFile}
-              download="CV_MUHAMMAD FARHAN NABIL.pdf"
+              download="Muhammad Farhan Nabil_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center px-6 py-3 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 transition duration-300 shadow-md"
